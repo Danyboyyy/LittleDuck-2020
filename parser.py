@@ -138,34 +138,16 @@ def p_termino_2(p):
 # FACTOR
 def p_factor_1(p):
     '''
-    factor_1 : factor_2
+    factor_1 : LEFT_PAR expresion_1 RIGHT_PAR
+             | factor_2 var_cte
     '''
 
 def p_factor_2(p):
     '''
-    factor_2 : LEFT_PAR expresion_1 RIGHT_PAR
-             | factor_3 var_cte
-    '''
-
-def p_factor_3(p):
-    '''
-    factor_3 : PLUS
+    factor_2 : PLUS
              | MINUS
              | empty
     '''
-
-# def p_factor_1(p):
-#     '''
-#     factor_1 : LEFT_PAR expresion_1 RIGHT_PAR
-#              | factor_2 var_cte
-#     '''
-
-# def p_factor_2(p):
-#     '''
-#     factor_2 : PLUS
-#              | MINUS
-#              | empty
-#     '''
 
 # CONDICION
 def p_condicion_1(p):
