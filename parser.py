@@ -207,8 +207,7 @@ if __name__ == '__main__':
             data = ifFile.read()
             ifFile.close()
             print(yacc.parse(data))
-        except EOFError:
-            print('asdf')
-            print(EOFError)
+        except:
+            print("Error opening the file!")
     else:
         print("Try running the following command: python parser.py name_of_file.txt")
