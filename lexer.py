@@ -22,7 +22,7 @@ reserved = {
 }
 
 # Regular expressions
-t_VAR_CTE_STRING = r'\"(\\.|[^\\"])*\"'
+t_VAR_CTE_STRING = r'"(.*?)"'
 t_PLUS = r'\+'
 t_MINUS = r'\-'
 t_TIMES = r'\*'
