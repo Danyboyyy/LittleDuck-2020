@@ -1,6 +1,11 @@
 __pycache__/
+dist/
+.antlr/
 
 parser.out
 parsetab.py
+
+antlr4.bat
+grun.bat
 
 *.txt
