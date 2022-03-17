@@ -11,17 +11,6 @@ class LittleDuck2020Lexer(Lexer):
     # Ignored characters
     ignore = ' \t'
 
-   # Reserved words 
-    reserved = {
-        'program': 'PROGRAM',
-        'int': 'INT',
-        'float': 'FLOAT',
-        'if': 'IF',
-        'else': 'ELSE',
-        'print': 'PRINT',
-        'var': 'VAR'
-    }
-
     # Identifiers and keywords
     VAR_CTE_ID = r'[A-za-z]([A-za-z]|[0-9])*'
     VAR_CTE_ID['program'] = PROGRAM
@@ -38,10 +27,10 @@ class LittleDuck2020Lexer(Lexer):
     MINUS = r'\-'
     TIMES = r'\*'
     DIV = r'\/'
-    LESS_THAN = r'\<'
-    GREATER_THAN = r'\>'
     EQUAL = r'\='
     NOT_EQUAL = r'\<\>'
+    LESS_THAN = r'\<'
+    GREATER_THAN = r'\>'
     LEFT_PAR = r'\('
     RIGHT_PAR = r'\)'
     LEFT_KEY = r'\{'
@@ -49,12 +38,6 @@ class LittleDuck2020Lexer(Lexer):
     COMMA = r'\,'
     COLON = r'\:'
     SEMI_COLON = r'\;'
-
-    # @_(r'[A-za-z]([A-za-z]|[0-9])*')
-    # def t_VAR_CTE_ID(self, t):
-    #     if t.value in reserved:
-    #         t.type = reserved[t.value]
-    #     return t
 
     @_(r'\d+')
     def VAR_CTE_INT(self, t):

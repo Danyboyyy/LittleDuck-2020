@@ -1,6 +1,6 @@
 import sys
 import ply.yacc as yacc
-from PLY.lexer import tokens
+from lexer import tokens
 
 # Grammar rules
 
